@@ -1,2 +1,3 @@
 pub mod dict;
-pub use dict::*;
+pub mod ecdict;
+pub use ecdict::*;

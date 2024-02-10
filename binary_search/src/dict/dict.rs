@@ -116,15 +116,3 @@ impl Dict {
 
 
 
-// struct EcdictWord {
-//     word: String,
-//     phonetic: String,
-//     translation: String,
-//     tag: String,
-// }
-
-// impl EcdictWord {
-//     fn build(entry: &str) -> Result<(), Box<dyn Error>> {
-//         Ok(())
-//     }
-// }
