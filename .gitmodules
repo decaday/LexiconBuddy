@@ -1,0 +1,3 @@
+[submodule "dict_preprocess/ecdict/dict_data"]
+	path = dict_preprocess/ecdict/dict_data
+	url = https://github.com/skywind3000/ECDICT
