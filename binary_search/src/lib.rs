@@ -1,4 +1,6 @@
 pub mod dict;
+pub mod gui;
+pub mod input_device;
 
 pub mod lexicon_buddy{
     use crate::dict::dict;
