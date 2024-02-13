@@ -1,19 +1,14 @@
-
-use crate::gui::gui::{LbScreenError, LbScreen};
+use crate::logic::dict::dict::*;
+use crate::gui::gui::{LbScreen, LbScreenError};
 use crate::input_device::input_mode::InputMode;
-use crate::dict::dict::*;
-
 
 pub struct DictScr {
     dict: Dict,
-
 }
 
 impl DictScr {
     fn new(dict: Dict) -> Self {
-        Self{
-            dict,
-        }
+        Self { dict }
     }
 }
 

@@ -3,8 +3,6 @@ use std::io::prelude::*;
 use std::io::SeekFrom;
 use std::io::{BufRead, BufReader};
 
-
-
 /** Dictionary types
 Ecdict, Oxford
  */
@@ -105,7 +103,8 @@ impl Dict {
                         Some(part) => part,
                         None => return Err(DictError::ParseError("part 2")),
                     }
-                        .trim().parse()?;
+                    .trim()
+                    .parse()?;
                     return Ok(addr);
                 }
             }
@@ -113,6 +112,3 @@ impl Dict {
         Err(DictError::WordNotFound)
     }
 }
-
-
-

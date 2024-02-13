@@ -1,5 +1,4 @@
-
-pub enum InputMode{
+pub enum InputMode {
     Disable,
     Lowercase,
     Uppercase,

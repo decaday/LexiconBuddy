@@ -1,5 +1,4 @@
-
-use crate::dict::dict::*;
+use crate::logic::dict::dict::*;
 
 struct EcdictWord {
     word: String,
@@ -9,7 +8,7 @@ struct EcdictWord {
 }
 
 impl EcdictWord {
-    fn build(dict: Dict,index: u64) -> Result<EcdictWord, DictError> {
-        Ok(())
+    fn build(dict: Dict, index: u64) -> Result<Self, DictError> {
+        todo!()
     }
 }
