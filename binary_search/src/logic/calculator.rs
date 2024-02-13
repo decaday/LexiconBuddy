@@ -1,9 +1,7 @@
 use kalk::parser;
-use std::fmt::Error;
 use std::collections::HashMap;
 use lazy_static::lazy_static;
 use std::ops::Deref;
-
 
 
 pub struct Context(parser::Context);
@@ -17,8 +15,9 @@ impl Deref for Context {
 pub fn get_display_string(input: &str) -> String {
     let mut output = String::from(input);
     for (key, value) in REPLACEMENTS.iter() {
+
         match input.find(key){
-            Some(offset) => output.replace_range(offset..offset+key.len(),value),
+            Some(offset) => output = output.replace(key,value),
             None => (),
         }
     }
