@@ -31,8 +31,8 @@ pub struct Dict {
     dict_type: DictTypes,
 }
 impl Dict {
-    pub fn build(dict_type: DictTypes) -> Result<Dict, DictError> {
-        let mut index_file = File::open("././index.txt")?;
+    pub fn build(dict_type: DictTypes, index_file_path: &str) -> Result<Dict, DictError> {
+        let mut index_file = File::open(index_file_path)?;
         let metadata = index_file.metadata()?;
         let index_file_size = metadata.len();
         Ok(Dict {
@@ -44,7 +44,7 @@ impl Dict {
 
     /** Use binary search to find the address of the word in the index.
      */
-    pub fn search_index(mut self, entry: &str) -> Result<u64, DictError> {
+    pub fn search_index(&mut self, entry: &str) -> Result<u64, DictError> {
         let mut low = 0;
         let mut high = self.index_file_size;
         let mut i = 0;
