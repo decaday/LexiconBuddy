@@ -1,5 +1,7 @@
+use binary_search::logic::dict::dict;
+use binary_search::logic::calculator;
 use binary_search::lexicon_buddy;
-use binary_search::dict;
+
 
 fn main() {
     match lexicon_buddy::run() {
@@ -11,6 +13,9 @@ fn main() {
             dict::DictError::ParseError(e) => println!("ParseError {e}"),
             dict::DictError::ParseIntError(e) => println!("ParseError {e}"),
             dict::DictError::WordNotFound => println!("Word not fond"),
-        }
+        },
     };
+    let mut context = calculator::Context::new();
+    let result = context.calculate("10");
+    println!("reslut is {result}")
 }
