@@ -1,1 +1,1 @@
-pub mod input_mode;
+pub mod input;

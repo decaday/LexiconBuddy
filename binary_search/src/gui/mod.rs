@@ -1,2 +1,2 @@
-mod dict_scr;
+pub(crate) mod dict_scr;
 mod gui;
